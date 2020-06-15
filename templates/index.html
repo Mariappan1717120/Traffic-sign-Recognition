@@ -1,0 +1,23 @@
+<html>
+
+<head>
+<title> Traffic Sign Recognition </title>
+</head>
+
+<body>
+
+<h1> Traffic Sign Recognition </h1>
+<form method="POST" action="/" enctype="multipart/form-data">
+<input type="file" name="userfile" placeholder="your image">
+<input type="submit">
+</form>
+
+{% if result %}	
+	<img src="{{ result['image']}}">
+	<br>
+	<h1> Predicted Traffic Sign is : <i> {{result['output']}} </i> </h1>
+{% endif %}
+</body>
+</html>
+
+
